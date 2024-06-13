@@ -30,3 +30,8 @@ function convertToRoman() {
 }
 
 convertBtn.addEventListener("click", convertToRoman);
+number.addEventListener("keydown", e => {
+  if (e.key === "Enter") {
+    convertToRoman();
+  }
+});
