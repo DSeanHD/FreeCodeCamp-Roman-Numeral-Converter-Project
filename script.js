@@ -8,6 +8,7 @@ const numerals = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
 function convertToRoman() {
   let userInput = Number(number.value);
   output.innerText = "";
+  output.style.padding = "1.2rem";
 
   if (number.value === "") {
     output.innerText = "Please enter a valid number";
@@ -29,6 +30,9 @@ function convertToRoman() {
 
 }
 
+window.addEventListener("load", () => {
+  output.style.padding = "0px";
+})
 convertBtn.addEventListener("click", convertToRoman);
 number.addEventListener("keydown", e => {
   if (e.key === "Enter") {
